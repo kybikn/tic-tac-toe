@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <!--<div class="container">-->
+      <div class="logo"></div>
+      <!-- <svg class="icon">
+        <use xlink:href="./assets/svg/sprite.svg#logo"></use>
+      </svg>-->
+      <nav class="nav">
+        <ul>
+          <li class="nav-link"><a href="#skills">Skills</a></li>
+          <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-link"><a href="#video">Video</a></li>
+          <li class="nav-link"><a href="#price">Price</a></li>
+          <li class="nav-link"><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="switch-lng">
+        <span><a href="#en" class="switchlng-en">en</a></span>
+        <span><a href="#slash" class="switchlng-slash">/</a></span>
+        <span><a href="#ru" class="switchlng-ru">ru</a></span>
+      </div>
+      <!--</div>-->
+    </header>
+
+    <main>
+      <section class="hero-container">
+        <div class="hero-box">
+          <h1 class="hero-title">Alexa Rise</h1>
+          <p class="hero-text">
+            Save sincere emotions, romantic feelings and happy moments of life
+            together with professional photographer Alexa Rise
+          </p>
+          <button class="button-gold">Hire me</button>
+        </div>
+      </section>
+
+      <div class="container">
+        <section id="skills">
+          <div class="section-title-wrapper">
+            <h2 class="section-title"><span class="bg-title">Skills</span></h2>
+          </div>
+
+          <!--<a href="https://github.com">
+            <svg class="icon">
+              <use xlink:href="./assets/svg/sprite.svg#github-logo"></use>
+            </svg>
+          </a>-->
+          <div class="skills-items">
+            <svg class="icon">
+              <use xlink:href="./assets/svg/sprite.svg#camera 1"></use>
+            </svg>
+            <svg class="icon">
+              <use xlink:href="./assets/svg/sprite.svg#video 1"></use>
+            </svg>
+            <svg class="icon">
+              <use xlink:href="./assets/svg/sprite.svg#image 1"></use>
+            </svg>
+            <svg class="icon">
+              <use xlink:href="./assets/svg/sprite.svg#mic 1"></use>
+            </svg>
+          </div>
+          <!--<div class="icon"></div>-->
+          <div>
+            <h4 class="item-title">Digital photography</h4>
+            <p class="item-text">
+              High-quality photos in the studio and on the nature
+            </p>
+          </div>
+
+          <div>
+            <h4 class="item-title">Video shooting</h4>
+            <p class="item-text">
+              Capture your moments so that they always stay with you
+            </p>
+          </div>
+
+          <div>
+            <h4 class="item-title">Retouch</h4>
+            <p class="item-text">
+              I strive to make photography surpass reality
+            </p>
+          </div>
+
+          <div>
+            <h4 class="item-title">Audio</h4>
+            <p class="item-text">
+              Professional sounds recording for video, advertising, portfolio
+            </p>
+          </div>
+        </section>
+
+        <section id="portfolio">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">
+              <span class="bg-title">Portfolio</span>
+            </h2>
+          </div>
+          <div>
+            <button class="button-transparent">Winter</button>
+            <button class="button-transparent">Spring</button>
+            <button class="button-transparent">Summer</button>
+            <button class="button-gold">Autumn</button>
+          </div>
+        </section>
+
+        <section id="video">
+          <div class="section-title-wrapper">
+            <h2 class="section-title"><span class="bg-title">Video</span></h2>
+          </div>
+        </section>
+
+        <section id="price">
+          <div class="section-title-wrapper">
+            <h2 class="section-title"><span class="bg-title">Price</span></h2>
+          </div>
+        </section>
+
+        <section id="contacts">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">
+              <span class="bg-title">Contacts</span>
+            </h2>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <a target="_blank" href="https://github.com/kybikn">
+          <svg
+            height="32"
+            aria-hidden="true"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="32"
+            data-view-component="true"
+            class="octicon octicon-mark-github v-align-middle"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            ></path>
+          </svg>
+        </a>
+
+        <a href="https://rs.school/js/"
+          ><img
+            src="https://rs.school/images/rs_school_js.svg"
+            height="32"
+            alt="logo"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
