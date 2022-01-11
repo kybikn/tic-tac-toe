@@ -35,6 +35,7 @@ body {
   width: 50px;
   height: 50px;
   transition: 0.3s;
+  fill: #ffffff;
 }
 
 .logo:hover {
@@ -42,9 +43,9 @@ body {
     contrast(87%);
 }
 
-li:pointer {
+/*li:pointer {
   cursor: pointer;
-}
+}*/
 
 .nav {
   margin-left: auto;
@@ -65,6 +66,11 @@ li:pointer {
   text-decoration: none;
   transition: 0.3s;
   color: #ffffff;
+}
+
+.nav-link:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
 
 .switch-lng {
@@ -121,7 +127,7 @@ li:pointer {
 
 .hero-text {
   margin-bottom: 25px;
-  height: 120px;
+  /* height: 120px;*/
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -168,7 +174,7 @@ li:pointer {
   padding: 0 20px;
 }*/
 
-.skills-items {
+.skills-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -247,6 +253,10 @@ li:pointer {
   background: #bdae82;
 }
 
+.button-gold:hover {
+  color: white;
+}
+
 .button-transparent {
   display: inline-block;
   height: 55px;
@@ -262,6 +272,10 @@ li:pointer {
   text-align: center;
   background-color: transparent;
   color: #bdae82;
+}
+
+.button-transparent:hover {
+  color: white;
 }
 
 .portfolio-box {
@@ -280,6 +294,11 @@ li:pointer {
   align-items: center;
 }
 
+/*.video-player:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}*/
+
 .button-svg {
   position: absolute;
 }
@@ -287,16 +306,18 @@ li:pointer {
 .price-box {
   display: flex;
   /* justify-content: center;*/
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   height: 505px;
+  text-align: center;
 }
 
 .price-border {
-  border: 2px solid #bdae82;
-  /* margin: 10px;
-   width: 450px;
-  height: 505px;*/
+  border: 3px solid #bdae82;
+  width: 450px;
+  /* height: 505px;
+  margin-right: 10px;
+  margin-left: 5px;*/
 }
 
 .price-title {
@@ -308,6 +329,7 @@ li:pointer {
   font-size: 28px;
   line-height: 56px;
   text-align: center;
+  padding-top: 42px;
   color: #ffffff;
 }
 
@@ -320,6 +342,8 @@ li:pointer {
   font-size: 24px;
   line-height: 48px;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #bdae82;
 }
 .price-text {
@@ -335,22 +359,22 @@ li:pointer {
   color: #ffffff;
 }
 
+.price-minibox {
+  margin-bottom: 40px;
+}
+
 .contacts-container {
   background-image: url(./assets/img/contacts.jpg);
   height: 700px;
   margin-top: 100px;
-  margin-right: 50px;
+  padding-left: 0;
+  padding-top: 60px;
 }
 
 .contacts-box {
-  /*display: block;
-  flex-wrap: wrap;*/
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 445px;
-  margin-top: 60px;
-  margin-right: 20px;
+  width: 450px;
+  margin-left: auto;
+  text-align: left;
 }
 
 .contacts-title {
@@ -360,7 +384,7 @@ li:pointer {
   font-size: 40px;
   line-height: 80px;
   color: #bdae82;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   margin-bottom: 42px;
 }
 
@@ -380,17 +404,22 @@ textarea {
   box-sizing: border-box;
   border-radius: 0px;
   height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 ::placeholder {
-  /*font-family: inherit;*/
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 40px;
   color: #bdae82;
+  padding-left: 10px;
+}
+
+.contacts-block {
+  display: inline-block;
+  width: 100%;
 }
 
 .footer-container {
@@ -401,16 +430,44 @@ textarea {
   align-items: center;
 }
 
-.footer-data {
-  text-align: justify;
-}
-.footer-text {
+/*.footer-data {
+}*/
+
+.footer-text-data {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 50px;
-  color: #ffffff;
+  margin-right: 15px;
   display: inline-block;
-  margin-right: 20px;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.footer-text-name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
+  margin-left: 30px;
+  display: inline-block;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.icon2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  transition: 0.3s;
+  fill: #ffffff;
+}
+
+.icon2:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
