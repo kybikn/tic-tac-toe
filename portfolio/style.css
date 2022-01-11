@@ -29,11 +29,11 @@ body {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
   background-image: url("./assets/svg/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
   transition: 0.3s;
 }
 
@@ -110,16 +110,17 @@ li:pointer {
 
 .hero-title {
   /* height: 120px; */
+  margin-bottom: 10px;
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
   font-size: 60px;
   line-height: 120px;
   color: #ffffff;
-  margin-bottom: 10px;
 }
 
 .hero-text {
+  margin-bottom: 25px;
   height: 120px;
   font-family: Inter;
   font-style: normal;
@@ -127,7 +128,6 @@ li:pointer {
   font-size: 20px;
   line-height: 40px;
   color: #ffffff;
-  margin-bottom: 25px;
 }
 
 .section-title-wrapper {
@@ -138,6 +138,7 @@ li:pointer {
   margin-right: auto;
   margin-top: 100px;
   margin-bottom: 60px;
+  text-align: center;
   background-image: linear-gradient(
     to top,
     #000 39px,
@@ -145,45 +146,27 @@ li:pointer {
     #bdae82 41px,
     #000 41px
   );
-  text-align: center;
 }
 
 .section-title {
   display: inline-block;
+  padding: 0 20px;
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 80px;
-  color: #bdae82;
   background-color: #000000;
-  padding: 0 20px;
+  color: #bdae82;
   /* margin-left: auto; */
   /* margin-right: auto; */
 }
 
-.bg-title {
+/*.bg-title {
   color: #bdae82;
   background-color: #000000;
   padding: 0 20px;
-}
-
-.icon {
-  /*width: 30px;
-  height: 30px;*/
-  fill: #bdae82;
-
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 0.3s;
-  /*margin-left: 129px;*/
-  /*background-size: 62px 50px;*/
-}
-
-.icon:hover {
-  fill: white;
-}
+}*/
 
 .skills-items {
   display: flex;
@@ -203,28 +186,54 @@ li:pointer {
   text-align: center;
 }
 
+.icon {
+  /*width: 30px;
+  height: 30px;*/
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  fill: #bdae82;
+  /*margin-left: 129px;*/
+  /*background-size: 62px 50px;*/
+}
+
+/*.icon:hover {
+  fill: white;
+}*/
+
 .item-title {
+  padding-top: 45px;
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 40px;
   color: #ffffff;
-  padding-top: 45px;
 }
 
 .item-text {
+  padding-top: 17px;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 40px;
-  padding-top: 17px;
   color: #ffffff;
 }
 
+.button-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
 .button-gold {
+  display: inline-block;
   height: 55px;
+  width: 220px;
   border-radius: 0px;
   border: 0;
   cursor: pointer;
@@ -234,16 +243,14 @@ li:pointer {
   font-weight: normal;
   font-size: 20px;
   line-height: 40px;
-  text-align: center;
-  display: inline-block;
-  width: 220px;
-
+  color: #000000;
   background: #bdae82;
 }
 
 .button-transparent {
+  display: inline-block;
   height: 55px;
-  background: none;
+  width: 220px;
   border-radius: 0px;
   border: 2px solid #bdae82;
   cursor: pointer;
@@ -253,17 +260,8 @@ li:pointer {
   font-size: 20px;
   line-height: 40px;
   text-align: center;
-  display: inline-block;
-  width: 220px;
+  background-color: transparent;
   color: #bdae82;
-}
-
-.btn-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 60px;
 }
 
 .portfolio-box {
@@ -277,10 +275,62 @@ li:pointer {
 
 .price-box {
   display: flex;
-  justify-content: center;
+  /* justify-content: center;*/
+  justify-content: space-around;
   flex-wrap: wrap;
+  height: 505px;
 }
 
-span {
+.price-border {
+  border: 1px solid #bdae82;
+  /* margin: 10px;
+   width: 450px;
+  height: 505px;*/
+}
+
+.price-title {
+  /* width: 128px;
+  height: 56px;*/
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.price-number {
+  /*width: 69px;
+  height: 48px;*/
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  color: #bdae82;
+}
+.price-text {
+  /*width: 174px;
+  height: 36px;*/
   display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-svg {
+  position: absolute;
 }
