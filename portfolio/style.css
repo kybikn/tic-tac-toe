@@ -24,10 +24,7 @@ body {
   background-image: url(./assets/img/bg.jpg);
   background-repeat: no-repeat;
   background-position: center 0;
-  width: 1440px;
   height: 90px;
-  padding: 0 20px;
-  margin: 0 auto;
   align-items: center;
 }
 
@@ -70,31 +67,31 @@ li:pointer {
   color: #ffffff;
 }
 
-.switchlng-en {
+.switch-lng {
+  width: 70px;
+  text-align: justify;
+  /* align-items: center; */
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  text-decoration: none;
+}
+
+.switchlng-en {
+  display: inline-block;
   color: #bdae82;
+  text-decoration: none;
 }
 
 .switchlng-slash {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
+  display: inline-block;
   color: #ffffff;
 }
 
 .switchlng-ru {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
+  display: inline-block;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .hero-container {
@@ -102,10 +99,8 @@ li:pointer {
   background-position: center -90px;
   background-repeat: no-repeat;
   height: 820px;
-  width: 1440px;
   padding-top: 160px;
   padding-left: 80px;
-  margin: 0 auto;
 }
 
 .hero-box {
@@ -137,23 +132,12 @@ li:pointer {
 
 .section-title-wrapper {
   width: 50%;
-  /*height: 2px;*/
+  height: 80px;
+  /* height: 2px; */
   margin-left: auto;
   margin-right: auto;
-}
-
-.section-title {
   margin-top: 100px;
   margin-bottom: 60px;
-  height: 80px;
-  width: 112;
-  font-family: Merriweather;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 80px;
-  text-align: center;
-  color: #bdae82;
   background-image: linear-gradient(
     to top,
     #000 39px,
@@ -161,11 +145,27 @@ li:pointer {
     #bdae82 41px,
     #000 41px
   );
+  text-align: center;
+}
+
+.section-title {
+  display: inline-block;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  color: #bdae82;
+  background-color: #000000;
+  padding: 0 20px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 
 .bg-title {
+  color: #bdae82;
   background-color: #000000;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .icon {
@@ -245,7 +245,7 @@ li:pointer {
   height: 55px;
   background: none;
   border-radius: 0px;
-  border: 1px solid #bdae82;
+  border: 2px solid #bdae82;
   cursor: pointer;
   font-family: Inter;
   font-style: normal;
@@ -253,7 +253,6 @@ li:pointer {
   font-size: 20px;
   line-height: 40px;
   text-align: center;
-  margin-right: 4px;
   display: inline-block;
   width: 220px;
   color: #bdae82;
@@ -263,4 +262,25 @@ li:pointer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
+.portfolio-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  /*width: 450px;
+  height: 560px;*/
+}
+
+.price-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+span {
+  display: block;
 }
