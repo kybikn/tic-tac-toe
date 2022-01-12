@@ -288,19 +288,34 @@ body {
 }
 
 .video-player {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 1400px;
+  height: 705px;
+  background-image: url("./assets/img/video-player.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/*.video-player:hover {
+.video-player-button {
+  /* position: absolute; */
+  background-image: url("./assets/svg/Play_hover.svg");
+  color: #ffffff;
+  width: 130px;
+  height: 130px;
+  transition: 0.3s;
+}
+
+.video-button {
+  padding: 0;
+  border: none;
+}
+.video-player-button:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
-}*/
-
-.button-svg {
-  position: absolute;
+  /*color: #bdae82;*/
 }
 
 .price-box {
@@ -414,7 +429,7 @@ textarea {
   font-size: 20px;
   line-height: 40px;
   color: #bdae82;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .contacts-block {
@@ -430,10 +445,7 @@ textarea {
   align-items: center;
 }
 
-/*.footer-data {
-}*/
-
-.footer-text-data {
+.footer-text {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -445,16 +457,31 @@ textarea {
   color: #ffffff;
 }
 
-.footer-text-name {
+.footer-text-link {
+  text-decoration: none;
+}
+
+.footer-link {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 50px;
-  margin-left: 30px;
-  display: inline-block;
+  margin-left: 60px;
+  /* display: inline-block; */
   text-align: justify;
+  text-decoration: none;
   color: #ffffff;
+}
+
+.ul-link {
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  /* width: 188px;
+  height: 50px; */
+  /* text-align: justify;
+  display: inline-block;*/
 }
 
 .icon2 {
@@ -462,8 +489,9 @@ textarea {
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 18px;
   transition: 0.3s;
+  /* display: inline-block; */
   fill: #ffffff;
 }
 
@@ -471,3 +499,7 @@ textarea {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 }
+
+/* .f {
+  display: flex;
+} */
