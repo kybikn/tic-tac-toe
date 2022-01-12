@@ -362,7 +362,6 @@ body {
 input {
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
-  box-sizing: border-box;
   border-radius: 0px;
   height: 50px;
   margin-bottom: 20px;
@@ -372,7 +371,6 @@ textarea {
   resize: none;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
-  box-sizing: border-box;
   border-radius: 0px;
   height: 100px;
   margin-bottom: 25px;
