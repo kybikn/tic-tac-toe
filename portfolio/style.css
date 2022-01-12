@@ -43,10 +43,6 @@ body {
     contrast(87%);
 }
 
-/*li:pointer {
-  cursor: pointer;
-}*/
-
 .nav {
   margin-left: auto;
   padding-right: 31px;
@@ -76,7 +72,6 @@ body {
 .switch-lng {
   width: 70px;
   text-align: justify;
-  /* align-items: center; */
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
@@ -115,7 +110,6 @@ body {
 }
 
 .hero-title {
-  /* height: 120px; */
   margin-bottom: 10px;
   font-family: Merriweather;
   font-style: normal;
@@ -127,7 +121,6 @@ body {
 
 .hero-text {
   margin-bottom: 25px;
-  /* height: 120px;*/
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -139,7 +132,6 @@ body {
 .section-title-wrapper {
   width: 50%;
   height: 80px;
-  /* height: 2px; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -164,27 +156,13 @@ body {
   line-height: 80px;
   background-color: #000000;
   color: #bdae82;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
 }
-
-/*.bg-title {
-  color: #bdae82;
-  background-color: #000000;
-  padding: 0 20px;
-}*/
 
 .skills-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /*background-position: center top;*/
 }
-
-/* .skill-item:nth-child(1) {
-  background-image: url("./assets/svg/camera.svg");
-  background-size: 62px 50px;
-} */
 
 .skills-item {
   width: 320px;
@@ -193,20 +171,12 @@ body {
 }
 
 .icon {
-  /*width: 30px;
-  height: 30px;*/
   height: 50px;
   background-size: contain;
   background-repeat: no-repeat;
   transition: 0.3s;
   fill: #bdae82;
-  /*margin-left: 129px;*/
-  /*background-size: 62px 50px;*/
 }
-
-/*.icon:hover {
-  fill: white;
-}*/
 
 .item-title {
   padding-top: 45px;
@@ -283,12 +253,9 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  /*width: 450px;
-  height: 560px;*/
 }
 
 .video-player {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,7 +267,6 @@ body {
 }
 
 .video-player-button {
-  /* position: absolute; */
   background-image: url("./assets/svg/Play_hover.svg");
   color: #ffffff;
   width: 130px;
@@ -312,15 +278,14 @@ body {
   padding: 0;
   border: none;
 }
+
 .video-player-button:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
-  /*color: #bdae82;*/
 }
 
 .price-box {
   display: flex;
-  /* justify-content: center;*/
   justify-content: space-between;
   flex-wrap: wrap;
   height: 505px;
@@ -330,14 +295,9 @@ body {
 .price-border {
   border: 3px solid #bdae82;
   width: 450px;
-  /* height: 505px;
-  margin-right: 10px;
-  margin-left: 5px;*/
 }
 
 .price-title {
-  /* width: 128px;
-  height: 56px;*/
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
@@ -349,8 +309,6 @@ body {
 }
 
 .price-number {
-  /*width: 69px;
-  height: 48px;*/
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
@@ -361,9 +319,8 @@ body {
   padding-bottom: 20px;
   color: #bdae82;
 }
+
 .price-text {
-  /*width: 174px;
-  height: 36px;*/
   display: block;
   font-family: Inter;
   font-style: normal;
@@ -399,7 +356,6 @@ body {
   font-size: 40px;
   line-height: 80px;
   color: #bdae82;
-  /* margin-top: 60px; */
   margin-bottom: 42px;
 }
 
@@ -468,7 +424,6 @@ textarea {
   font-size: 20px;
   line-height: 50px;
   margin-left: 60px;
-  /* display: inline-block; */
   text-align: justify;
   text-decoration: none;
   color: #ffffff;
@@ -478,10 +433,7 @@ textarea {
   text-decoration: none;
   transition: 0.3s;
   display: inline-block;
-  /* width: 188px;
-  height: 50px; */
-  /* text-align: justify;
-  display: inline-block;*/
+  list-style: none;
 }
 
 .icon2 {
@@ -491,7 +443,6 @@ textarea {
   height: 30px;
   margin-left: 18px;
   transition: 0.3s;
-  /* display: inline-block; */
   fill: #ffffff;
 }
 
@@ -499,7 +450,3 @@ textarea {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 }
-
-/* .f {
-  display: flex;
-} */
