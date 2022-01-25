@@ -9,7 +9,6 @@ nav.addEventListener('click', closeMenu);
 function toggleMenu() {
     nav.classList.toggle("navbar");
     hamburger.classList.toggle("change");
-    // hamburger.classList.toggle("active");
     }
 
 function closeMenu(event) {
