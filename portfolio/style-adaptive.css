@@ -1,3 +1,10 @@
+@media (max-width: 1440px) {
+  .price-box {
+    gap: 20px;
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding-left: 20px;
@@ -7,6 +14,8 @@
     background-image: url("./assets/img/bg-small.jpg");
     background-position: center 0;
     height: 90px;
+    /* overflow: hidden;
+    flex-wrap: nowrap; */
   }
 
   .logo {
@@ -93,7 +102,7 @@
     background-color: #ecf0f1;
     margin: 10px auto;
     transition: all 0.3s ease-in-out;
-    transition: 0.5s;
+    transition: 0.7s;
   }
 
   .hamburger.change .line-1 {
@@ -110,6 +119,8 @@
 
   .hamburger:hover {
     cursor: pointer;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+      brightness(92%) contrast(87%);
   }
 
   .hero-container {
