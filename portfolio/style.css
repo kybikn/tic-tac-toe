@@ -14,14 +14,14 @@ body {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .header-container {
   display: flex;
-  background-image: url(./assets/img/bg.jpg);
+  background-image: url("./assets/img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
   height: 90px;
@@ -34,7 +34,7 @@ body {
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  transition: 0.3s;
+  transition: 0.7s;
   fill: #ffffff;
 }
 
@@ -48,23 +48,23 @@ body {
   padding-right: 31px;
 }
 
-.nav-link {
+.nav-li {
   display: inline-block;
   list-style: none;
   padding-left: 30px;
 }
 
-.nav-link a {
+.nav-link {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.7s;
   color: #ffffff;
 }
 
-.nav-link:hover {
+.nav-li:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 }
@@ -96,7 +96,7 @@ body {
 }
 
 .hero-container {
-  background-image: url(./assets/img/bg.jpg);
+  background-image: url("./assets/img/bg.jpg");
   background-position: center -90px;
   background-repeat: no-repeat;
   height: 820px;
@@ -111,7 +111,7 @@ body {
 
 .hero-title {
   margin-bottom: 10px;
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: bold;
   font-size: 60px;
@@ -172,7 +172,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   height: 50px;
-  transition: 0.3s;
+  transition: 0.7s;
   fill: #bdae82;
 }
 
@@ -219,6 +219,7 @@ body {
   font-weight: normal;
   font-size: 20px;
   line-height: 40px;
+  transition: 0.7s;
   color: #000000;
   background: #bdae82;
 }
@@ -240,6 +241,7 @@ body {
   font-size: 20px;
   line-height: 40px;
   text-align: center;
+  transition: 0.7s;
   background-color: transparent;
   color: #bdae82;
 }
@@ -259,7 +261,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1400px;
+  width: 100%;
   height: 705px;
   background-image: url("./assets/img/video-player.jpg");
   background-position: center;
@@ -271,7 +273,7 @@ body {
   color: #ffffff;
   width: 130px;
   height: 130px;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 
 .video-button {
@@ -288,13 +290,13 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 505px;
   text-align: center;
 }
 
 .price-border {
   border: 3px solid #bdae82;
   width: 450px;
+  padding-bottom: 40px;
 }
 
 .price-title {
@@ -336,7 +338,7 @@ body {
 }
 
 .contacts-container {
-  background-image: url(./assets/img/contacts.jpg);
+  background-image: url("./assets/img/contacts.jpg");
   height: 700px;
   margin-top: 100px;
   padding-left: 0;
@@ -421,7 +423,7 @@ textarea {
 .footer-link-gold:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
-  transition: 0.3s;
+  transition: 0.7s;
 }
 
 .footer-text-link {
@@ -442,7 +444,7 @@ textarea {
 
 .ul-link {
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.7s;
   display: inline-block;
   list-style: none;
 }
@@ -451,7 +453,7 @@ textarea {
   width: 30px;
   height: 30px;
   margin-left: 18px;
-  transition: 0.3s;
+  transition: 0.7s;
   fill: #ffffff;
 }
 

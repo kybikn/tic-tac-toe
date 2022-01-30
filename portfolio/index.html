@@ -19,6 +19,7 @@
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style-adaptive.css" />
   </head>
 
   <body>
@@ -26,17 +27,26 @@
       <div class="logo"></div>
       <nav class="nav">
         <ul>
-          <li class="nav-link"><a href="#skills">Skills</a></li>
-          <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
-          <li class="nav-link"><a href="#video">Video</a></li>
-          <li class="nav-link"><a href="#price">Price</a></li>
-          <li class="nav-link"><a href="#contacts">Contacts</a></li>
+          <li class="nav-li"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-li">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-li"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-li"><a class="nav-link" href="#price">Price</a></li>
+          <li class="nav-li">
+            <a class="nav-link" href="#contacts">Contacts</a>
+          </li>
         </ul>
       </nav>
       <div class="switch-lng">
         <a class="switchlng-en" href="#">en</a>
         <span class="switchlng-slash">/</span>
         <a class="switchlng-ru" href="#">ru</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
       </div>
     </header>
 
@@ -197,6 +207,7 @@
           <a
             href="https://github.com/kybikn"
             class="footer-text footer-link-gold footer-text-link"
+            target="_blank"
             >github</a
           >
         </div>
@@ -204,6 +215,7 @@
           <a
             href="https://rs.school/js-stage0/"
             class="footer-link footer-link-gold"
+            target="_blank"
           >
             Rolling Scopes School
           </a>
@@ -211,28 +223,28 @@
 
         <ul>
           <li class="ul-link">
-            <a href="#">
+            <a href="https://www.instagram.com/" target="_blank">
               <svg class="icon2">
                 <use xlink:href="./assets/svg/sprite2.svg#inst"></use>
               </svg>
             </a>
           </li>
           <li class="ul-link">
-            <a href="#">
+            <a href="https://www.facebook.com/" target="_blank">
               <svg class="icon2">
                 <use xlink:href="./assets/svg/sprite2.svg#fb"></use>
               </svg>
             </a>
           </li>
           <li class="ul-link">
-            <a href="#">
+            <a href="https://twitter.com/" target="_blank">
               <svg class="icon2">
                 <use xlink:href="./assets/svg/sprite2.svg#tw"></use>
               </svg>
             </a>
           </li>
           <li class="ul-link">
-            <a href="#">
+            <a href="https://www.pinterest.com/" target="_blank">
               <svg class="icon2">
                 <use xlink:href="./assets/svg/sprite2.svg#pinterest"></use>
               </svg>
@@ -241,5 +253,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
