@@ -142,11 +142,20 @@
     transform: translateY(-13px) rotate(-45deg);
   }
 
+  .hamburger.change.light .line-1 {
+    background-color: #000000;
+  }
+  
+  .hamburger.change.light .line-3 {
+    background-color: #000000;
+  }
+  
+/* 
   .hamburger:hover {
     cursor: pointer;
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
       brightness(92%) contrast(87%);
-  }
+  } */
 
   .hero-container {
     height: 500px;
