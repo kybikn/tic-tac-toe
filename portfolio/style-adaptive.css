@@ -5,7 +5,32 @@
   }
 }
 
+
+
+
+
 @media (max-width: 768px) {
+
+
+  .nav  {
+    background-color: #000000;
+  }
+    
+  .nav-link  {
+    color: #ffffff;
+  }
+
+.nav.light  {
+  background-color: #ffffff;
+}
+  
+.nav-link.light  {
+  color: #000000;
+}
+
+
+
+
   .container {
     padding-left: 20px;
   }
@@ -55,7 +80,7 @@
     top: 0;
     height: 100%;
     width: 620px;
-    background-color: #000000;
+    /* background-color: #000000; */
     overflow-x: hidden;
     transition: right 0.8s;
     z-index: 1;
@@ -320,3 +345,11 @@
     width: 100%;
   }
 }
+
+
+/* @media (min-width: 769px) {
+  #nav {
+    background-color: black;
+    color: #ffffff;
+  }
+} */
