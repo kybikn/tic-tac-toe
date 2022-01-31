@@ -8,7 +8,7 @@ const portfolioBtnsBox = document.querySelector(".button-box");
 const switchlngBox = document.querySelector(".switch-lng");
 const translateElems = document.querySelectorAll('[data-i18]');
 const langButtons = document.querySelectorAll('.switchlng');
-const themeArray = ['body', '.nav', '.nav-link', '.nav-li', '.theme-button', '.theme-button:hover', '.theme-button.active', '.hamburger.line', '.section-title', '.section-title-wrapper', '.item-title', '.item-text', '.button-transparent', '.button-transparent:hover', '.button-gold', '.button-gold:hover', '.price-title', '.price-text', '.footer-container', '.footer-text' ];
+const themeArray = ['body', '.nav', '.nav-link', '.nav-li', '.theme-button', '.hamburger', '.section-title', '.section-title-wrapper', '.item-title', '.item-text', '.button-transparent', '.button-gold', '.price-title', '.price-text', '.footer-container', '.footer-text' ];
 const themeButton = document.querySelector(".theme-button");
 
 

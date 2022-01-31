@@ -424,6 +424,7 @@ textarea {
   margin-right: 15px;
   display: inline-block;
   text-align: justify;
+  color: #ffffff;
 }
 
 .footer-link-gold:hover {
@@ -479,17 +480,8 @@ margin-left: auto;
 margin-right: 20px;
 } */
 
-
-/* .nav.light {
-  background-color: #ffffff; 
-} */
-
-/* .nav-link.light {
- color: #000000;
-} */
-
 .theme-button {
-  background-image: url("./assets/svg/carbon_sun.svg");
+  background-image: url("./assets/svg/sun.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 45px;
@@ -497,19 +489,18 @@ margin-right: 20px;
   margin-top: 2px;
   margin-right: 120px;
   transition: 0.7s;
+  cursor: pointer;
   fill: #ffffff;
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+    brightness(92%) contrast(87%);
 }
 
 .theme-button.light {
   background-image: url("./assets/svg/moon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 45px;
-  height: 45px;
-  margin-top: 2px;
-  margin-right: 120px;
-  transition: 0.7s;
-  fill: #ffffff;
 }
 
 .theme-button:hover.light {
@@ -521,25 +512,29 @@ margin-right: 20px;
 .theme-button.active {
 
 }
-
+/* 
 .hamburger.line.light {
+  background-color: #000000; */
+  /* color: #000000; */
+/* } */ */
+
+.line-1.light {
+  background-color: #000000;
+}
+
+.line-3.light {
   background-color: #000000;
 }
 
 
 .section-title.light {
   background-color: #ffffff;
+  color: #000000;
 }
 
-.section-title-wrapper {
+.section-title-wrapper.light {
   /* color: #000000; */
-  /* background-image: linear-gradient(
-    to top,
-    #ffffff; 39px,
-    #000000;39px,
-    #000000;41px,
-    #ffffff; 41px
-  ); */
+   background-image: linear-gradient(to top, #ffffff 39px, #000000 39px,  #000000 41px,#ffffff 41px );
 }
 
 .item-title.light {
@@ -550,13 +545,14 @@ margin-right: 20px;
   color: #000000;
 }
 
-/* .icon {
-  fill: #bdae82;
-} */
-
 .button-transparent.light {
   background-color: #fff;
   color: #000;
+}
+
+.button-transparent.active.light {
+  color: white;
+  background: #bdae82;
 }
 
 .button-transparent.light:hover {
