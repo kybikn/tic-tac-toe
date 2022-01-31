@@ -78,7 +78,12 @@ body {
   font-size: 20px;
 }
 
-.switchlng-en {
+.switchlng {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.switchlng.active {
   display: inline-block;
   color: #bdae82;
   text-decoration: none;
@@ -89,11 +94,7 @@ body {
   color: #ffffff;
 }
 
-.switchlng-ru {
-  display: inline-block;
-  color: #ffffff;
-  text-decoration: none;
-}
+
 
 .hero-container {
   background-image: url("./assets/img/bg.jpg");
@@ -193,9 +194,9 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 36px;
-  color: #ffffff;
   padding-left: 20px;
   padding-right: 20px;
+  color: #ffffff;
 }
 
 .button-box {
@@ -411,6 +412,7 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: #000000;
 }
 
 .footer-text {
@@ -422,7 +424,6 @@ textarea {
   margin-right: 15px;
   display: inline-block;
   text-align: justify;
-  color: #ffffff;
 }
 
 .footer-link-gold:hover {
@@ -465,4 +466,123 @@ textarea {
 .icon2:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
+}
+
+
+ /* светлая тема */
+ body.light {
+  background: #ffffff;
+}
+
+/* .switch-lng {
+margin-left: auto;
+margin-right: 20px;
+} */
+
+
+/* .nav.light {
+  background-color: #ffffff; 
+} */
+
+/* .nav-link.light {
+ color: #000000;
+} */
+
+.theme-button {
+  background-image: url("./assets/svg/carbon_sun.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  margin-top: 2px;
+  margin-right: 120px;
+  transition: 0.7s;
+  fill: #ffffff;
+}
+
+.theme-button.light {
+  background-image: url("./assets/svg/moon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  margin-top: 2px;
+  margin-right: 120px;
+  transition: 0.7s;
+  fill: #ffffff;
+}
+
+.theme-button:hover.light {
+  cursor: pointer;
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+    brightness(92%) contrast(87%);
+}
+
+.theme-button.active {
+
+}
+
+.hamburger.line.light {
+  background-color: #000000;
+}
+
+
+.section-title.light {
+  background-color: #ffffff;
+}
+
+.section-title-wrapper {
+  /* color: #000000; */
+  /* background-image: linear-gradient(
+    to top,
+    #ffffff; 39px,
+    #000000;39px,
+    #000000;41px,
+    #ffffff; 41px
+  ); */
+}
+
+.item-title.light {
+  color: #000000;
+}
+
+.item-text.light {
+  color: #000000;
+}
+
+/* .icon {
+  fill: #bdae82;
+} */
+
+.button-transparent.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.button-transparent.light:hover {
+  color: #000;
+}
+
+.button-gold.light  {
+  color: white;
+}
+
+.button-gold.light:hover {
+  color: #000000;
+}
+
+.price-title.light {
+  color: #000;
+}
+
+.price-text.light {
+  color: #000;
+}
+
+.footer-container.light {
+  background: #000000;
+}
+
+.footer-text.light {
+  color: white;
 }
