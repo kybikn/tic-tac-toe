@@ -206,6 +206,11 @@ body {
   margin-bottom: 60px;
 }
 
+.button-transparent.active {
+  color: #000000;
+  background: #bdae82;
+}
+
 .button-gold {
   display: inline-block;
   height: 55px;
