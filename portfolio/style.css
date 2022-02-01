@@ -83,6 +83,7 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
+
 .switchlng.active {
   display: inline-block;
   color: #bdae82;
@@ -93,8 +94,6 @@ body {
   display: inline-block;
   color: #ffffff;
 }
-
-
 
 .hero-container {
   background-image: url("./assets/img/bg.jpg");
@@ -207,11 +206,6 @@ body {
   margin-bottom: 60px;
 }
 
-.button-transparent.active {
-  color: #000000;
-  background: #bdae82;
-}
-
 .button-gold {
   display: inline-block;
   height: 55px;
@@ -252,8 +246,21 @@ body {
   color: #bdae82;
 }
 
+.pulse:hover, .pulse:focus{
+	box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #bdae82}
+}
+
 .button-transparent:hover {
   color: white;
+}
+
+.button-transparent.active {
+  color: #000000;
+  background: #bdae82;
 }
 
 .portfolio-box {
@@ -470,15 +477,18 @@ textarea {
 }
 
 
+
+
+
  /* светлая тема */
- body.light {
+
+body.light {
   background: #ffffff;
 }
 
-/* .switch-lng {
-margin-left: auto;
-margin-right: 20px;
-} */
+.switch-lng { 
+  margin-right: 20px;
+}
 
 .theme-button {
   background-image: url("./assets/svg/sun.svg");
@@ -486,8 +496,8 @@ margin-right: 20px;
   background-repeat: no-repeat;
   width: 45px;
   height: 45px;
-  margin-top: 2px;
-  margin-right: 120px;
+  margin-top: 0;
+  margin-right: 0;
   transition: 0.7s;
   cursor: pointer;
   fill: #ffffff;
@@ -509,15 +519,6 @@ margin-right: 20px;
     brightness(92%) contrast(87%);
 }
 
-.theme-button.active {
-
-}
-/* 
-.hamburger.line.light {
-  background-color: #000000; */
-  /* color: #000000; */
-/* } */ */
-
 .line-1.light {
   background-color: #000000;
 }
@@ -526,14 +527,12 @@ margin-right: 20px;
   background-color: #000000;
 }
 
-
 .section-title.light {
   background-color: #ffffff;
   color: #000000;
 }
 
 .section-title-wrapper.light {
-  /* color: #000000; */
    background-image: linear-gradient(to top, #ffffff 39px, #000000 39px,  #000000 41px,#ffffff 41px );
 }
 
