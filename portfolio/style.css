@@ -270,23 +270,43 @@ body {
   gap: 25px;
 }
 
+
+
+
+
+
 .video-player {
+  background-image: url("./assets/video/video.mp4");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 705px;
-  background-image: url("./assets/img/video-player.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  max-width: 1400px;
+  height: calc(46% + 60px);
+  max-height: 705px;
 }
 
 .video-player-button {
   background-image: url("./assets/svg/Play_hover.svg");
-  color: #ffffff;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 130px;
   height: 130px;
   transition: 0.7s;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.video-player-button:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    cursor: pointer;
 }
 
 .video-button {
@@ -294,10 +314,121 @@ body {
   border: none;
 }
 
-.video-player-button:hover {
+.viewer {
+  /* background-image: url("./assets/img/video-player.jpg"); */
+  width: calc(100% + 2px);
+  height: auto;
+  border: 1px solid #bdae82;
+  border-bottom: 0;
+}
+
+.poster {
+  background-image: url('./assets/img/video-player.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.control-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100% + 2px);
+  /* width: 100%; */
+  height: 60px;
+  padding: 0 20px;
+  background-color: #000000;
+  border: 1px solid #bdae82;
+  border-top: 0;
+}
+
+.play {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 36px;
+  transition: 0.7s;
+}
+
+.play:hover,
+.play:active {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
+    cursor: pointer;
 }
+
+.play-icon {
+  background-image: url('./assets/svg/play.svg');
+}
+
+.pause-icon {
+  background-image: url('./assets/svg/pause.svg');
+}
+
+.volume-icon {
+  background-image: url('./assets/svg/volume.svg');
+}
+
+.mute-icon {
+  background-image: url('./assets/svg/mute.svg');
+}
+
+.progress,
+.volume {
+  background: linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 0%,
+    #c8c8c8 0%,
+    #c8c8c8 100%
+  );
+  height: 10px;
+  width: calc(80% - 160px);
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+/* 
+.progress, */
+.volume {
+  background: linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 40%,
+    #c8c8c8 40%,
+    #c8c8c8 100%
+  );
+}
+
+.volume {
+  width: calc(20% - 40px);
+}
+
+.progress::-webkit-slider-thumb,
+.volume::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #fff;
+}
+
+
+
+
+
+
 
 .price-box {
   display: flex;
