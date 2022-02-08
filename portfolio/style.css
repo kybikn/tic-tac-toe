@@ -388,13 +388,12 @@ body {
   );
   height: 10px;
   width: calc(80% - 160px);
-  /* transition: background 450ms ease-in; */
+  transition: background 450ms ease-in;
   appearance: none;
-  /* outline: none; */
+  outline: none;
 }
 
-/* 
-.progress, */
+/* .progress, */
 .volume {
   background: linear-gradient(
     to right,

@@ -102,68 +102,87 @@ const video = document.querySelector(".viewer");
 const playBtn = document.querySelector(".play");
 const button = document.querySelector(".video-button");
 const sound = document.querySelector(".volume-icon");
-const controlPlay = document.querySelector(".progress");
 const controlSound = document.querySelector(".volume");
+const controlPlay = document.querySelector(".progress");
 // const control = document.querySelector(".control-box");
 
 playBtn.addEventListener("click", togglePlay);
 button.addEventListener("click", togglePlay);
+video.addEventListener("click", togglePlay);
 sound.addEventListener("click", toggleSound);
-controlPlay.addEventListener("change", updatePlay);
+video.addEventListener("play", updateButton);
+video.addEventListener("pause", updateButton);
+video.addEventListener("volumechange", updateAudioButton);
 controlSound.addEventListener("change", updateVolume);
+controlPlay.addEventListener("change", updatePlay);
 
-function playVideo() {
-  video.currentTime = 0;
-  video.play();
-}
+// function playVideo() {
+//   video.currentTime = 0;
+//   video.play();
+// }
 
-function pauseVideo() {
-  video.pause();
-}
+// function pauseVideo() {
+//   video.pause();
+// }
 
 function togglePlay() {
   if (video.paused) {
-    playBtn.classList.add("pause");
-    button.classList.add("pause");
-    sound.classList.add("mute");
+    //   video.currentTime = 0;
     video.play();
   } else {
-    playBtn.classList.remove("pause");
-    button.classList.remove("pause");
-    sound.classList.remove("mute");
     video.pause();
+  }
+}
+
+function updateButton() {
+  if (video.paused) {
+    playBtn.classList.remove("pause");
+    button.style.display = "block";
+  } else {
+    playBtn.classList.add("pause");
+    button.style.display = "none";
+  }
+}
+
+function updateAudioButton() {
+  if (video.muted || video.volume === 0) {
+    sound.classList.add("mute");
+  } else {
+    sound.classList.remove("mute");
   }
 }
 
 function toggleSound() {
-  if (video.paused) {
-    sound.classList.add("mute");
-    video.play();
+  if (video.muted) {
+    video.muted = false;
   } else {
-    sound.classList.remove("mute");
-    video.pause();
+    video.muted = true;
   }
 }
 
-// function updateVolume() {
-//   let volume = this.value;
-//   video.volume = volume;
-// }
+function updateVolume() {
+  video.volume = controlSound.value / 100;
+  volume.style.background = linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 40%,
+    #c8c8c8 40%,
+    #c8c8c8 100%
+  );
+}
+
 // function updatePlay() {
 //   let rate = this.value;
 //   video.progress = rate;
 // }
 
-// let isPausedByMouse = false;
-// controlPlay.addEventListener("mousedown", (e) => {
-//   if (!button.paused) {
-//     isPausedByMouse = true;
-//     button.pause();
-//   }
-// });
-// controlPlay.addEventListener("mouseup", () => {
-//   if (isPausedByMouse) {
-//     isPausedByMouse = false;
-//     button.play();
-//   }
-// });
+function updatePlay() {
+  video.progress = controlPlay.value / 100;
+  volume.style.background = linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 40%,
+    #c8c8c8 40%,
+    #c8c8c8 100%
+  );
+}
