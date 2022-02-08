@@ -137,19 +137,17 @@
         </div>
 
         <div class="video-player">
-          <div class="video-player-button">
-            <button class="video-button"></button>
+          <div class="video-button">
+            <!-- <button class="video-button"></button> -->
           </div>
-
-          <div>
-            <video class="viewer" poster="./assets/img/video-player.jpg"></video>
-          </div>
+          <video class="viewer" poster="./assets/img/video-player.jpg" src="./assets/video/video.mp4"></video>
           <div class="control-box">
             <div class="play play-icon"></div>
             <input type="range" value="40" min="0" max="100" step="1" class="progress">
-            <div class="play volume-icon"></div>
+            <div class="play-icon volume-icon"></div>
             <input type="range" value="40" min="0" max="100" step="1" class="volume">
           </div>
+        </div>
       </section>
 
 
@@ -203,9 +201,10 @@
     <section id="contacts" class="container contacts-container">
       <div class="contacts-box">
         <h2 class="contacts-title" data-i18="contact-me">Contact me</h2>
-        <input type="email" placeholder="E-mail" class="contacts-block" data-i18="e-mail" />
-        <input type="tel" placeholder="Phone" class="contacts-block" data-i18="phone" />
-        <textarea name="Message" placeholder="Message" class="contacts-block" data-i18="message"></textarea>
+        <input type="email" placeholder="E-mail" class="contacts-block input-box" data-i18="e-mail" />
+        <input type="tel" placeholder="Phone" class="contacts-block input-box" data-i18="phone" />
+        <textarea name="Message" placeholder="Message" class="contacts-block textarea-box"
+          data-i18="message"></textarea>
         <button class="button-gold pulse" data-i18="send-message">Send message</button>
       </div>
     </section>

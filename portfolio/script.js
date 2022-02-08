@@ -65,7 +65,6 @@ function changeImage(event) {
 
 function getTranslate(event) {
   if (!event.target.dataset.language) {
-    console.log("Нет попал в кнопку языка!");
     return;
   }
   const language = event.target.dataset.language;
@@ -99,59 +98,72 @@ function onLightTheme() {
   });
 }
 
-const button = document.querySelector("button");
-
-const audio = document.querySelector("audio");
 const video = document.querySelector(".viewer");
-
 const playBtn = document.querySelector(".play");
+const button = document.querySelector(".video-button");
+const sound = document.querySelector(".volume-icon");
+const controlPlay = document.querySelector(".progress");
+const controlSound = document.querySelector(".volume");
+// const control = document.querySelector(".control-box");
 
-const videoContainer = document.querySelector(".video-container");
+playBtn.addEventListener("click", togglePlay);
+button.addEventListener("click", togglePlay);
+sound.addEventListener("click", toggleSound);
+controlPlay.addEventListener("change", updatePlay);
+controlSound.addEventListener("change", updateVolume);
 
-// const button = document.querySelector("button");
-// const audio = document.querySelector("audio");
-// const playBtn = document.querySelector(".play");
-// const videoContainer = document.querySelector(".video-container");
+function playVideo() {
+  video.currentTime = 0;
+  video.play();
+}
 
-// function playAudio() {
-//   audio.currentTime = 0;
-//   audio.play();
+function pauseVideo() {
+  video.pause();
+}
+
+function togglePlay() {
+  if (video.paused) {
+    playBtn.classList.add("pause");
+    button.classList.add("pause");
+    sound.classList.add("mute");
+    video.play();
+  } else {
+    playBtn.classList.remove("pause");
+    button.classList.remove("pause");
+    sound.classList.remove("mute");
+    video.pause();
+  }
+}
+
+function toggleSound() {
+  if (video.paused) {
+    sound.classList.add("mute");
+    video.play();
+  } else {
+    sound.classList.remove("mute");
+    video.pause();
+  }
+}
+
+// function updateVolume() {
+//   let volume = this.value;
+//   video.volume = volume;
+// }
+// function updatePlay() {
+//   let rate = this.value;
+//   video.progress = rate;
 // }
 
-// function pauseAudio() {
-//   audio.pause();
-// }
-
-// function toggleBtn() {
-//   if (audio.paused) {
-//     playBtn.classList.add("pause");
-//     audio.play();
-//   } else {
-//     playBtn.classList.remove("pause");
-//     audio.pause();
+// let isPausedByMouse = false;
+// controlPlay.addEventListener("mousedown", (e) => {
+//   if (!button.paused) {
+//     isPausedByMouse = true;
+//     button.pause();
 //   }
-// }
-
-// playBtn.addEventListener("click", toggleBtn);
-
-// const linkItems = document.querySelectorAll(".nav-link");
-// const linkItemsBox = document.querySelector(".nav");
-// const linkImages = document.querySelectorAll(".portfolio-image");
-
-// linkItemsBox.addEventListener("click", changeAudio);
-
-// function changeAudio(event) {
-//   if (event.target.classList.contains("nav-link")) {
-//     let bird = event.target.dataset.bird;
-
-//     videoContainer.style.backgroundImage = `url('./assets/img/${bird}.jpg')`;
-
-//     linkItems.forEach((element) => element.classList.remove("active"));
-
-//     event.target.classList.add("active");
-
-//     audio.src = `./assets/audio/${bird}.mp3`;
-//     playBtn.classList.add("pause");
-//     audio.play();
+// });
+// controlPlay.addEventListener("mouseup", () => {
+//   if (isPausedByMouse) {
+//     isPausedByMouse = false;
+//     button.play();
 //   }
-// }
+// });
