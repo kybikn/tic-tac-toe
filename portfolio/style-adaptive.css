@@ -1,0 +1,380 @@
+@media (max-width: 1440px) {
+  .price-box {
+    gap: 20px;
+    justify-content: space-around;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .nav  {
+    background-color: #000000;
+  }
+    
+  .nav-link  {
+    color: #ffffff;
+  }
+
+  .nav.light  {
+  background-color: #ffffff;
+}
+  
+  .nav-link.light  {
+  color: #000000;
+}
+
+  .container {
+    padding-left: 20px;
+  }
+
+  .header-container {
+    background-image: url("./assets/img/bg-small.jpg");
+    background-position: center 0;
+    height: 90px;
+    /* overflow: hidden;
+    flex-wrap: nowrap; */
+  }
+
+  .logo {
+    margin-left: 40px;
+  }
+
+  .switch-lng {
+    line-height: 50px;
+    margin-left: auto;
+    margin-right: 0;
+    width: 130px;
+  }
+
+  .switchlng-en {
+    display: inline-block;
+    color: #bdae82;
+    text-decoration: none;
+    width: 30px;
+  }
+
+  .switchlng-slash {
+    display: inline-block;
+    color: #ffffff;
+  }
+
+  .switchlng-ru {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    width: 30px;
+    text-align: center;
+  }
+
+  .nav {
+    position: fixed;
+    right: -620px;
+    top: 0;
+    height: 100%;
+    width: 620px;
+    overflow-x: hidden;
+    transition: right 0.8s;
+    z-index: 1;
+    padding-left: 127px;
+    padding-top: 134px;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .nav-li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    font-size: 35px;
+    line-height: 72.55px;
+    margin: 0;
+  }
+
+  .nav.navbar {
+    position: absolute;
+    right: 0px;
+  }
+
+  .theme-button {
+   padding-right: 170px;
+  }  
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 64px;
+    z-index: 2;
+  }
+
+  .hamburger .line {
+    width: 50px;
+    height: 3px;
+    display: block;
+    background-color: #ecf0f1;
+    margin: 10px auto;
+    transition: all 0.3s ease-in-out;
+    transition: 0.7s;
+  }
+
+  .hamburger.change .line-1 {
+    transform: translateY(13px) rotate(45deg);
+  }
+
+  .hamburger.change .line-2 {
+    opacity: 0;
+  }
+
+  .hamburger.change .line-3 {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+
+  .hamburger.change.light .line-1 {
+    background-color: #000000;
+  }
+  
+  .hamburger.change.light .line-3 {
+    background-color: #000000;
+  }
+  
+  .hamburger:hover {
+    cursor: pointer;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+      brightness(92%) contrast(87%);
+  }
+
+  .hero-container {
+    height: 500px;
+    background-image: url("./assets/img/bg-small.jpg");
+    padding-top: 78px;
+    padding-left: 20px;
+    background-position: center -90px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    line-height: 24px;
+    margin-bottom: 60px;
+  }
+
+  .hero-box {
+    width: 60.5%;
+    min-width: 180px;
+    margin-left: 40px;
+  }
+
+  .section-title-wrapper {
+    width: 50%;
+    height: 80px;
+    margin-top: 80px;
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    padding: 0 15px;
+    font-size: 32px;
+  }
+
+  .skills-box {
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 44px;
+    padding-top: 10px;
+  }
+
+  .skills-item {
+    width: 300px;
+    height: 224px;
+    margin-bottom: 36px;
+  }
+
+  .item-title {
+    padding-top: 30px;
+  }
+
+  .item-text {
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .icon {
+    margin-bottom: 0;
+  }
+
+  .button-box {
+    width: 445px;
+    margin: auto;
+    padding-top: 18px;
+    padding-bottom: 60px;
+  }
+
+  .video-player {
+    height: 418px;
+    margin-top: 50px;
+  }
+
+  .video-button {
+    background-image: url("./assets/svg/play-btn.svg");
+    width: 75px;
+    height: 75px;
+  }
+
+  .control-box {
+    position: relative;
+    justify-content: space-between;
+    height: 60px;
+    padding-top: 12px;
+    padding-right: 20px;
+  }
+  
+ .progress {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  } 
+
+  .volume {
+    width: calc(100% - 150px);
+    height: 7px;
+  }
+
+  .play-icon {
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .price-box {
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 48px;
+  }
+
+  .price-border {
+    width: 420px;
+  }
+
+  .contacts-container {
+    background-image: url("./assets/img/contacts2.jpg");
+    height: 600px;
+    margin-top: 77px;
+  }
+
+  .contacts-box {
+    margin: auto;
+    text-align: center;
+  }
+
+  .contacts-title {
+    font-size: 32px;
+    line-height: 64px;
+    margin-bottom: 42px;
+  }
+
+  .footer-container {
+    height: 190px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .footer-text {
+    line-height: 24px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .footer-link {
+    line-height: 24px;
+    margin-left: 0;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .icon2 {
+    width: 32px;
+    height: 32px;
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+
+
+@media (max-width: 730px) {
+  .skills-box {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 619px) {
+  .nav {
+    width: 100%;
+  }
+
+  .contacts-container {
+    background-image: url("./assets/img/contacts2.jpg");
+    height: 600px;
+    margin-top: 77px;
+  }
+
+  .contacts-box {
+    width: calc(100% - 40px);
+    margin: auto;
+    text-align: center;
+  }
+
+  .contacts-title {
+    font-size: 32px;
+    line-height: 64px;
+  }
+
+  .skills-box {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+
+  .skills-item {
+    max-width: calc(100%-20px);
+  }
+
+  .portfolio-box img {
+    max-width: calc(100% - 20px);
+  }
+
+  .hamburger {
+    right: 40px;
+  }
+
+  .switch-lng {
+    margin-right: 38px;
+  }
+
+  .button-box {
+    width: 100%;
+  }
+}
