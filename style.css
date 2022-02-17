@@ -1,0 +1,144 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: cornflowerblue;
+}
+
+h1 {
+  color: blueviolet;
+  text-align: center;
+  text-shadow: 2px 2px rgb(236, 51, 4);
+  font-size: 60px;
+}
+
+.shake:hover {
+  animation: shake 0.25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.res {
+  color: rgb(0, 252, 84);
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 50px;
+}
+
+/* .row {
+    width: 100%;
+    height: 100%;
+  } */
+.game {
+  /* width: 100%;
+  height: 100%; */
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+.box {
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  /* height: 180px;
+  width: 180px; */
+  border: 10px solid rgb(168, 7, 128);
+  border-radius: 10px;
+  color: blue;
+  cursor: pointer;
+  background-color: rgb(155, 233, 233);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  box-sizing: border-box;
+}
+
+.box:hover {
+  background-color: cyan;
+  border: 5s red;
+}
+
+.active {
+  background: rgb(150, 235, 14);
+}
+/* .box {
+    height: 180px;
+    width: 180px;
+  } */
+
+/* 
+.game:first-child .field {
+  border-top: 0;
+}
+
+.game:last-child .field {
+  border-bottom: 0;
+}
+.game .field:first-child {
+  border-left: 0;
+}
+.game .field:last-child {
+  border-right: 0;
+} */
+
+.btn {
+  width: 200px;
+  height: 60px;
+  color: yellow;
+  background-color: yellowgreen;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  border-radius: 15px;
+  border: dotted;
+  cursor: pointer;
+}
