@@ -142,3 +142,40 @@ h1 {
   border: dotted;
   cursor: pointer;
 }
+
+/* .footer-text {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 50px;
+  padding-left: 50px;
+  color: #ffffff;
+}
+
+.footer-text-link {
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.footer-text-link:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+  cursor: pointer;
+}
+
+.icon {
+  background-image: url(./assets/svg/rss.svg);
+  height: 50px;
+  width: 200px;
+  transition: 0.7s;
+  fill: #ffffff;
+  background-repeat: no-repeat;
+}
+
+.icon:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+  cursor: pointer;
+} */
