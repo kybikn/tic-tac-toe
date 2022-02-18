@@ -19,7 +19,7 @@ let player2 = "O";
 let score = {
   x: 0,
   o: 0,
-  // d: 0,
+  d: 0,
 };
 // let p1 = 0;
 // p1.addEventListener("click", win);
@@ -28,6 +28,7 @@ game.addEventListener("click", init);
 
 btnGame.onclick = function () {
   h.classList.toggle("shake");
+  // score.classList.add("rotate");
   // gif.classList.remove(".grow");
 };
 
@@ -82,10 +83,11 @@ function win() {
         box[comb[i][0]].classList.add("active");
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
+
         score.x++;
+        // score[x].classList.add("rotate");
         res.innerText = "Выиграли крестики!  Ходов: " + count;
 
-        // X++;
         let crossAudio = new Audio("./audio/audio.mp3");
         crossAudio.play();
         let img = new Image("./gameOver.gif");
@@ -110,7 +112,7 @@ function win() {
       }, 1000);
       game.removeEventListener("click", init);
     } else if (count == 9) {
-      // score.d++;
+      score.d += 1 / 8;
       res.innerText = "Ничья!  Ходов: " + count;
 
       // gif.classList.add(".growNon");
@@ -144,7 +146,7 @@ function newGame() {
 function getScore() {
   document.getElementById("sX").innerHTML = score.x;
   document.getElementById("sO").innerHTML = score.o;
-  // document.getElementById("sD").innerHTML = stat.d;
+  document.getElementById("sD").innerHTML = score.d;
 }
 
 // let p1Counter = 1;
