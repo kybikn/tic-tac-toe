@@ -18,7 +18,7 @@ h1 {
   font-size: 60px;
 }
 
-.shake:hover {
+.shake {
   animation: shake 0.25s;
   animation-iteration-count: infinite;
 }
@@ -94,7 +94,6 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 40px;
   padding-bottom: 30px;
-  /* margin-bottom: 30px; */
 }
 
 .game {
@@ -106,10 +105,8 @@ h1 {
   height: 360px;
   display: flex;
   flex-wrap: wrap;
-  /* padding-top: 20px; */
-  /* margin-top: 20px; */
-  /* margin: 10px 0; */
 }
+
 .box {
   text-align: center;
   width: 120px;
@@ -157,7 +154,7 @@ h1 {
 } */
 
 .btn {
-  width: 200px;
+  width: 400px;
   height: 60px;
   color: yellow;
   background-color: yellowgreen;
@@ -248,3 +245,14 @@ h1 {
     contrast(87%);
   cursor: pointer;
 }
+
+/* .grow {
+  visibility: visible;
+}
+.growNon {
+  visibility: hidden;
+  transform: scale(1.6);
+} */
+/* .hidden {
+  display: none;
+} */
