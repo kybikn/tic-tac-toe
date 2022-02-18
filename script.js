@@ -8,14 +8,20 @@ let h = document.querySelector(".shake");
 // let gifNon = document.querySelector(".growNon");
 // let A = document.getElementById("hider");
 // let B = document.getElementById("text");
+// var currentPlayer = document.getElementById("curPlyr");
 
 let move = 0;
 let count = 0;
 let round = 1;
+let player1 = "X";
+let player2 = "O";
+// let player = "X";
+let score = {
+  x: 0,
+  o: 0,
+  // d: 0,
+};
 // let p1 = 0;
-// ley X = 'X';
-// let O = 'O';
-
 // p1.addEventListener("click", win);
 btnGame.addEventListener("click", newGame);
 game.addEventListener("click", init);
@@ -32,7 +38,12 @@ function init(e) {
   // if (e.innerHTML != "") return;
   // if (move != "") return;
   if ((e.target.className = "box")) {
-    move % 2 === 0 ? (e.target.innerHTML = "X") : (e.target.innerHTML = "O");
+    move % 2 === 0
+      ? (e.target.innerHTML = player1)
+      : (e.target.innerHTML = player2);
+    // currentPlayer.innerHTML = player1.toUpperCase();
+    // currentPlayer.innerHTML = `Сейчас ходят: ${player1}`;
+    // currentPlayer.innerHTML = "Сейчас ходят: " + player1;
     move++;
     count++;
     win();
@@ -63,14 +74,15 @@ function win() {
   ];
   for (let i = 0; i < comb.length; i++) {
     if (
-      box[comb[i][0]].innerHTML == "X" &&
-      box[comb[i][1]].innerHTML == "X" &&
-      box[comb[i][2]].innerHTML == "X"
+      box[comb[i][0]].innerHTML == player1 &&
+      box[comb[i][1]].innerHTML == player1 &&
+      box[comb[i][2]].innerHTML == player1
     ) {
       setTimeout(() => {
         box[comb[i][0]].classList.add("active");
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
+        score.x++;
         res.innerText = "Выиграли крестики!  Ходов: " + count;
 
         // X++;
@@ -83,21 +95,24 @@ function win() {
       game.removeEventListener("click", init);
       // gif.classList.add(".grow");
     } else if (
-      box[comb[i][0]].innerHTML == "O" &&
-      box[comb[i][1]].innerHTML == "O" &&
-      box[comb[i][2]].innerHTML == "O"
+      box[comb[i][0]].innerHTML == player2 &&
+      box[comb[i][1]].innerHTML == player2 &&
+      box[comb[i][2]].innerHTML == player2
     ) {
       setTimeout(() => {
         box[comb[i][0]].classList.add("active");
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
+        score.o++;
         res.innerText = "Выиграли нолики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
         crossAudio.play();
       }, 1000);
       game.removeEventListener("click", init);
     } else if (count == 9) {
+      // score.d++;
       res.innerText = "Ничья!  Ходов: " + count;
+
       // gif.classList.add(".growNon");
       let crossAudio = new Audio("./audio/gameOver.mp3");
       crossAudio.play();
@@ -109,6 +124,7 @@ function win() {
 
 function newGame() {
   count = 0;
+  // console.log(stat);
   move = 0;
   round++;
   res.innerText = "";
@@ -117,11 +133,18 @@ function newGame() {
     item.classList.remove("X", "O", "active");
     let crossAudio = new Audio("./audio/pobeda.mp3");
     crossAudio.play();
+    getScore();
   });
   // document.getElementById("hider").onclick = function () {
   //   document.getElementById("text").hidden = true;
   // };
   game.addEventListener("click", init);
+}
+
+function getScore() {
+  document.getElementById("sX").innerHTML = score.x;
+  document.getElementById("sO").innerHTML = score.o;
+  // document.getElementById("sD").innerHTML = stat.d;
 }
 
 // let p1Counter = 1;

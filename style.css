@@ -256,3 +256,10 @@ h1 {
 /* .hidden {
   display: none;
 } */
+
+/* .currentPlayer {
+  width: 140px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+} */
