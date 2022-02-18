@@ -16,6 +16,7 @@ h1 {
   text-align: center;
   text-shadow: 2px 2px rgb(236, 51, 4);
   font-size: 60px;
+  cursor: pointer;
 }
 
 .shake {
@@ -67,6 +68,7 @@ h1 {
   font-weight: bold;
   color: #0e2fb1;
   font-family: cursive;
+  cursor: pointer;
 }
 
 .p1 {
@@ -225,28 +227,24 @@ h1 {
 
 .footer-text-link {
   text-decoration: none;
-  transition: 0.7s;
+  transition: 0.8s;
 }
 
 .footer-text-link:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
   cursor: pointer;
+  color: red;
 }
 
 .icon {
-  background-image: url(./rss.svg);
   height: 30px;
   width: 120px;
-  transition: 0.7s;
+  transition: 0.8s;
   fill: #ffffff;
-  background-repeat: no-repeat;
 }
 
 .icon:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
   cursor: pointer;
+  fill: red;
 }
 
 /* .grow {
