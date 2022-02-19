@@ -1,7 +1,3 @@
-/* * {
-  box-sizing: border-box;
-} */
-
 body {
   height: 100%;
   display: flex;
@@ -102,8 +98,6 @@ h1 {
 }
 
 .game {
-  /* width: 100%;
-  height: 100%; */
   justify-content: center;
   align-items: center;
   width: 360px;
@@ -116,8 +110,6 @@ h1 {
   text-align: center;
   width: 120px;
   height: 120px;
-  /* height: 180px;
-  width: 180px; */
   border: 10px solid rgb(168, 7, 128);
   border-radius: 10px;
   color: blue;
@@ -138,10 +130,6 @@ h1 {
 .active {
   background: rgb(150, 235, 14);
 }
-/* .box {
-    height: 180px;
-    width: 180px;
-  } */
 
 /* 
 .game:first-child .field {
@@ -211,8 +199,9 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* text-align: center; */
   justify-content: space-between;
-  height: 80px;
+  height: 40px;
 }
 .footer-text {
   display: inline-block;
@@ -220,8 +209,8 @@ h1 {
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
-  line-height: 50px;
   padding-left: 25px;
+  padding-top: 20px;
   color: #ffffff;
 }
 
@@ -237,7 +226,8 @@ h1 {
 
 .icon {
   height: 30px;
-  width: 120px;
+  padding-right: 25px;
+  width: 100px;
   transition: 0.8s;
   fill: #ffffff;
 }
@@ -246,21 +236,3 @@ h1 {
   cursor: pointer;
   fill: red;
 }
-
-/* .grow {
-  visibility: visible;
-}
-.growNon {
-  visibility: hidden;
-  transform: scale(1.6);
-} */
-/* .hidden {
-  display: none;
-} */
-
-/* .currentPlayer {
-  width: 140px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-} */
