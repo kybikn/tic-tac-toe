@@ -3,7 +3,6 @@ const res = document.querySelector(".res");
 const btnGame = document.querySelector(".btn");
 const box = document.querySelectorAll(".box");
 const h = document.querySelector(".shake");
-h.classList.remove("shake");
 let move = 0;
 let count = 0;
 let round = 1;
@@ -15,6 +14,7 @@ let score = {
   d: 0,
 };
 
+h.classList.remove("shake");
 btnGame.addEventListener("click", newGame);
 game.addEventListener("click", init);
 
@@ -22,10 +22,10 @@ document.write(document.img);
 let flag = 1;
 function changeImage() {
   if (flag == 0) {
-    document.img.src = "happy.png";
+    document.img.src = "./assets/img/happy.png";
     flag = 1;
   } else {
-    document.img.src = "syper.png";
+    document.img.src = "./assets/img/syper.png";
     flag = 0;
   }
 }
@@ -78,7 +78,6 @@ function win() {
         res.innerText = "Выиграли крестики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
         crossAudio.play();
-        let img = new Image("./gameOver.gif");
       }, 1000);
       game.removeEventListener("click", init);
     } else if (

@@ -97,6 +97,18 @@ h1 {
   padding-bottom: 30px;
 }
 
+.one {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  /* text-align: left; */
+  /* justify-content: start; */
+}
+.foto {
+  margin-right: 200px;
+  margin-top: 100px;
+  width: 200px;
+}
 .game {
   justify-content: center;
   align-items: center;
@@ -104,6 +116,7 @@ h1 {
   height: 360px;
   display: flex;
   flex-wrap: wrap;
+  margin-right: 400px;
 }
 
 .box {
