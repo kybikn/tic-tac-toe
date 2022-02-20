@@ -16,17 +16,11 @@ let score = {
 };
 var player = "x";
 var playerO = "o";
-var stat = {
-  x: 0,
-  o: 0,
-  d: 0,
-};
 
 h.classList.remove("shake");
 btnGame.addEventListener("click", newGame);
 game.addEventListener("click", init);
 
-// document.write(document.img);
 function changeImage() {
   if (flag == 0) {
     document.img.src = "./assets/img/happy.png";
@@ -37,18 +31,10 @@ function changeImage() {
   }
 }
 
-// btnGame.onclick = function () {
-//   h.classList.toggle("shake");
-// alert("game over");
-// score.classList.add("rotate");
-// gif.classList.add("grow");
-// };
-
 function init(e) {
   h.classList.remove("shake");
   res.innerText = "РАУНД: " + round;
   if (e.target.innerHTML != "") return;
-  // if (move != "") return;
   if ((e.target.className = "box")) {
     move % 2 === 0
       ? (e.target.innerHTML = player1)
@@ -81,8 +67,6 @@ function win() {
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
         score.x++;
-        // stat[player] += 1;
-        stat.x++;
         // if (round < 3) {
         //   score.x++;
         // } else if (round == 3) {
@@ -96,7 +80,6 @@ function win() {
         //   score.x++;
         // }
         setLocalStorage();
-        // score[x].classList.add("rotate");
         res.innerText = "Выиграли крестики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
         crossAudio.play();
@@ -112,10 +95,6 @@ function win() {
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
         score.o++;
-        // stat[ playerO] += 1;
-        // stat.o += 1;
-
-        stat.o++;
         setLocalStorage();
         res.innerText = "Выиграли нолики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
@@ -124,7 +103,6 @@ function win() {
       game.removeEventListener("click", init);
     } else if (count == 9) {
       score.d += 1 / 8;
-      stat.d += 1 / 8;
       setLocalStorage();
       res.innerText = "Ничья!  Ходов: " + count;
       let crossAudio = new Audio("./audio/gameOver.mp3");
@@ -146,8 +124,7 @@ function newGame() {
     item.classList.remove("X", "O", "active");
     let crossAudio = new Audio("./audio/pobeda.mp3");
     crossAudio.play();
-    // getScore();
-    updateStat();
+    getScore();
     changeImage();
   });
   game.addEventListener("click", init);
@@ -157,12 +134,6 @@ function getScore() {
   document.getElementById("X").innerHTML = score.x;
   document.getElementById("O").innerHTML = score.o;
   document.getElementById("D").innerHTML = score.d;
-}
-
-function updateStat() {
-  document.getElementById("sX").innerHTML = stat.x;
-  document.getElementById("sO").innerHTML = stat.o;
-  document.getElementById("sD").innerHTML = stat.d;
 }
 
 function setLocalStorage() {

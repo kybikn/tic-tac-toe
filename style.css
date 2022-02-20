@@ -97,22 +97,25 @@ h1 {
   padding-bottom: 30px;
   transition: 0.5s linear;
 }
+
 .res:hover {
   transform: scale(2);
 }
 
 .container {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* text-align: left; */
-  /* justify-content: space-between; */
 }
+
 .emoje {
-  /* margin-right: 200px; */
   margin-top: 100px;
   width: 200px;
+  transition: 0.5s linear;
 }
+
+.emoje:hover {
+  transform: rotate(360deg);
+}
+
 .game {
   justify-content: center;
   align-items: center;
@@ -125,10 +128,7 @@ h1 {
 }
 
 .stat {
-  /* display: flex; */
-  /* align-items: center; */
   margin-top: 100px;
-  /* margin-right: 100px; */
   font-size: 30px;
 }
 
@@ -240,7 +240,6 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* text-align: center; */
   justify-content: space-between;
   height: 40px;
 }
