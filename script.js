@@ -3,6 +3,7 @@ const res = document.querySelector(".res");
 const btnGame = document.querySelector(".btn");
 const box = document.querySelectorAll(".box");
 const h = document.querySelector(".shake");
+let flag = 1;
 let move = 0;
 let count = 0;
 let round = 1;
@@ -13,13 +14,19 @@ let score = {
   o: 0,
   d: 0,
 };
+var player = "x";
+var playerO = "o";
+var stat = {
+  x: 0,
+  o: 0,
+  d: 0,
+};
 
 h.classList.remove("shake");
 btnGame.addEventListener("click", newGame);
 game.addEventListener("click", init);
 
-document.write(document.img);
-let flag = 1;
+// document.write(document.img);
 function changeImage() {
   if (flag == 0) {
     document.img.src = "./assets/img/happy.png";
@@ -39,8 +46,8 @@ function changeImage() {
 
 function init(e) {
   h.classList.remove("shake");
-  res.innerText = "Раунд: " + round;
-  // if (e.innerHTML != "") return;
+  res.innerText = "РАУНД: " + round;
+  if (e.target.innerHTML != "") return;
   // if (move != "") return;
   if ((e.target.className = "box")) {
     move % 2 === 0
@@ -74,6 +81,21 @@ function win() {
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
         score.x++;
+        // stat[player] += 1;
+        stat.x++;
+        // if (round < 3) {
+        //   score.x++;
+        // } else if (round == 3) {
+        // return;
+        //   score = {
+        //     x: 0,
+        //     o: 0,
+        //     d: 0,
+        //   };
+        // } else {
+        //   score.x++;
+        // }
+        setLocalStorage();
         // score[x].classList.add("rotate");
         res.innerText = "Выиграли крестики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
@@ -90,6 +112,11 @@ function win() {
         box[comb[i][1]].classList.add("active");
         box[comb[i][2]].classList.add("active");
         score.o++;
+        // stat[ playerO] += 1;
+        // stat.o += 1;
+
+        stat.o++;
+        setLocalStorage();
         res.innerText = "Выиграли нолики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
         crossAudio.play();
@@ -97,6 +124,8 @@ function win() {
       game.removeEventListener("click", init);
     } else if (count == 9) {
       score.d += 1 / 8;
+      stat.d += 1 / 8;
+      setLocalStorage();
       res.innerText = "Ничья!  Ходов: " + count;
       let crossAudio = new Audio("./audio/gameOver.mp3");
       crossAudio.play();
@@ -106,6 +135,7 @@ function win() {
 }
 
 function newGame() {
+  // if (let round = 1; round <= 2; round++)
   h.classList.toggle("shake");
   count = 0;
   move = 0;
@@ -116,14 +146,38 @@ function newGame() {
     item.classList.remove("X", "O", "active");
     let crossAudio = new Audio("./audio/pobeda.mp3");
     crossAudio.play();
-    getScore();
+    // getScore();
+    updateStat();
     changeImage();
   });
   game.addEventListener("click", init);
 }
 
 function getScore() {
-  document.getElementById("sX").innerHTML = score.x;
-  document.getElementById("sO").innerHTML = score.o;
-  document.getElementById("sD").innerHTML = score.d;
+  document.getElementById("X").innerHTML = score.x;
+  document.getElementById("O").innerHTML = score.o;
+  document.getElementById("D").innerHTML = score.d;
 }
+
+function updateStat() {
+  document.getElementById("sX").innerHTML = stat.x;
+  document.getElementById("sO").innerHTML = stat.o;
+  document.getElementById("sD").innerHTML = stat.d;
+}
+
+function setLocalStorage() {
+  if (round <= 10) {
+    localStorage.setItem("score", JSON.stringify(score));
+  } else if (round > 10) {
+    // xxx = score;
+    // newGame();
+  }
+}
+window.addEventListener("load", setLocalStorage);
+
+function getLocalStorage() {
+  let xxx = JSON.parse(localStorage.getItem("score"));
+  // xxx = 0;
+}
+
+// window.addEventListener('beforeunload', setLocalStorage);

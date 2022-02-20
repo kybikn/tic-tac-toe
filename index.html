@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="shortcut icon" href="./assets/toe.ico" type="image/x-icon">
 <link rel="stylesheet" href="./style.css">
 
 <head>
@@ -8,15 +9,15 @@
 
 <body>
     <h1 class="shake">КРЕСТИКИ-НОЛИКИ</h1>
-    <div class="players">
-        <div class="p1"><span>КРЕСТИКИ : <span id="sX">0</span></span></div>
-        <div class="p3"><span>НИЧЬЯ : <span id="sD">0</span></span></div>
-        <div class="p2"><span>НОЛИКИ : <span id="sO">0</span></span></div>
-    </div>
+    <!-- <div class="players">
+        <div class="p1"><span>КРЕСТИКИ : <span id="X">0</span></span></div>
+        <div class="p3"><span>НИЧЬЯ : <span id="D">0</span></span></div>
+        <div class="p2"><span>НОЛИКИ : <span id="O">0</span></span></div>
+    </div> -->
     <div class="res"></div>
-    <div class="one">
+    <div class="container">
         <div>
-            <img name='img' class="foto" src="./assets/img/happy.png" />
+            <img name='img' class="emoje" src="./assets/img/happy.png" />
         </div>
         <div class="game">
             <div class="box"></div>
@@ -29,8 +30,25 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
+        <div class="stat">
+            <table>
+                <th colspan="2">Статистика</th>
+                <tr>
+                    <td>X</td>
+                    <td><span id="sX">0</span></td>
+                </tr>
+                <tr>
+                    <td>O</td>
+                    <td><span id="sO">0</span></td>
+                </tr>
+                <tr>
+                    <td>Ничьи</td>
+                    <td><span id="sD">0</span></td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <button class="btn pulse play" id="hider">New game</button>
+    <button class="btn pulse play" id="hider">СТАРТ</button>
     <footer class="footer-container">
         <a href="https://github.com/kybikn" class="footer-text footer-text-link" target="_blank">github</a>
         <p class="footer-text">2022</p>

@@ -55,7 +55,7 @@ h1 {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
+/* 
 .players {
   width: 100%;
   display: flex;
@@ -65,9 +65,9 @@ h1 {
   color: #0e2fb1;
   font-family: cursive;
   cursor: pointer;
-}
+} */
 
-.p1 {
+/* .p1 {
   margin-left: 100px;
   transition: 0.5s linear;
 }
@@ -79,14 +79,14 @@ h1 {
 
 .p3 {
   transition: 0.5s linear;
-}
-
+} */
+/* 
 .p1:hover,
 .p2:hover,
 .p3:hover {
   transform: scale(2);
-  /* transform: rotate(360deg); */
-}
+  transform: rotate(360deg);
+} */
 
 .res {
   color: rgb(0, 252, 84);
@@ -95,17 +95,21 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 40px;
   padding-bottom: 30px;
+  transition: 0.5s linear;
+}
+.res:hover {
+  transform: scale(2);
 }
 
-.one {
+.container {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  /* justify-content: center; */
+  /* align-items: center; */
   /* text-align: left; */
-  /* justify-content: start; */
+  /* justify-content: space-between; */
 }
-.foto {
-  margin-right: 200px;
+.emoje {
+  /* margin-right: 200px; */
   margin-top: 100px;
   width: 200px;
 }
@@ -116,7 +120,30 @@ h1 {
   height: 360px;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 400px;
+  padding-right: 250px;
+  padding-left: 230px;
+}
+
+.stat {
+  /* display: flex; */
+  /* align-items: center; */
+  margin-top: 100px;
+  /* margin-right: 100px; */
+  font-size: 30px;
+}
+
+.stat table {
+  border-collapse: collapse;
+}
+
+.stat table,
+.stat th,
+.stat td {
+  border: 5px solid rgb(80, 8, 214);
+  background-color: rgb(14, 199, 220);
+  padding: 5px;
+  text-align: center;
+  color: blue;
 }
 
 .box {
@@ -177,6 +204,7 @@ h1 {
 .pulse:hover,
 .pulse:focus {
   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  background-color: chartreuse;
   animation: pulse 1s;
 }
 
@@ -223,7 +251,7 @@ h1 {
   font-weight: normal;
   font-size: 25px;
   padding-left: 25px;
-  padding-top: 20px;
+  padding-top: 70px;
   color: #ffffff;
 }
 
@@ -239,6 +267,7 @@ h1 {
 
 .icon {
   height: 30px;
+  padding-top: 40px;
   padding-right: 25px;
   width: 100px;
   transition: 0.8s;
