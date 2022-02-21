@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="shortcut icon" href="./assets/toe.ico" type="image/x-icon">
-<link rel="stylesheet" href="./style.css">
 
 <head>
+    <link rel="shortcut icon" href="./assets/toe.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
     <title>Крестики-нолики</title>
 </head>
 
@@ -12,7 +12,7 @@
     <div class="res"></div>
     <div class="container">
         <div>
-            <img name='img' class="emoje" src="./assets/img/happy.png" />
+            <img class="emoje" alt="happy" src="./assets/img/happy.png" />
         </div>
         <div class="game">
             <div class="box"></div>
@@ -27,7 +27,9 @@
         </div>
         <div class="stat">
             <table>
-                <th colspan="2">Статистика</th>
+                <tr>
+                    <th colspan="2">Статистика</th>
+                </tr>
                 <tr>
                     <td>X</td>
                     <td><span id="X">0</span></td>
@@ -56,7 +58,7 @@
             </svg>
         </a>
     </footer>
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
