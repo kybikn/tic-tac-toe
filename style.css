@@ -55,38 +55,6 @@ h1 {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-/* 
-.players {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 30px;
-  font-weight: bold;
-  color: #0e2fb1;
-  font-family: cursive;
-  cursor: pointer;
-} */
-
-/* .p1 {
-  margin-left: 100px;
-  transition: 0.5s linear;
-}
-
-.p2 {
-  margin-right: 100px;
-  transition: 0.5s linear;
-}
-
-.p3 {
-  transition: 0.5s linear;
-} */
-/* 
-.p1:hover,
-.p2:hover,
-.p3:hover {
-  transform: scale(2);
-  transform: rotate(360deg);
-} */
 
 .res {
   color: rgb(0, 252, 84);
@@ -170,21 +138,6 @@ h1 {
 .active {
   background: rgb(150, 235, 14);
 }
-
-/* 
-.game:first-child .field {
-  border-top: 0;
-}
-
-.game:last-child .field {
-  border-bottom: 0;
-}
-.game .field:first-child {
-  border-left: 0;
-}
-.game .field:last-child {
-  border-right: 0;
-} */
 
 .btn {
   width: 400px;
