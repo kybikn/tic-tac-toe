@@ -1,10 +1,12 @@
 body {
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: cornflowerblue;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -62,7 +64,7 @@ h1 {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   transition: 0.5s linear;
 }
 
@@ -71,7 +73,12 @@ h1 {
 }
 
 .container {
+  max-width: 1440px;
+  width: 100%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 
 .emoje {
@@ -91,8 +98,8 @@ h1 {
   height: 360px;
   display: flex;
   flex-wrap: wrap;
-  padding-right: 250px;
-  padding-left: 230px;
+  /* padding-right: 250px; */
+  /* padding-left: 230px; */
 }
 
 .stat {
@@ -187,14 +194,14 @@ h1 {
 
 .footer-container {
   max-width: 1440;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   padding: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  height: 70px;
+  justify-content: space-around;
+  height: 40px;
 }
 .footer-text {
   display: inline-block;
@@ -203,7 +210,7 @@ h1 {
   font-weight: normal;
   font-size: 25px;
   /* padding-left: 25px; */
-  padding-top: 70px;
+  padding-top: 30px;
   color: #ffffff;
 }
 
@@ -219,9 +226,9 @@ h1 {
 
 .icon {
   height: 30px;
-  padding-top: 40px;
+  padding-top: 20px;
   /* padding-right: 25px; */
-  width: 100px;
+  width: 80px;
   transition: 0.8s;
   fill: #ffffff;
 }
@@ -237,7 +244,6 @@ h1 {
   background-repeat: no-repeat;
   width: 45px;
   height: 45px;
-
   margin-top: 0;
   margin-right: 0;
   transition: 0.7s;

@@ -189,6 +189,7 @@ function setLocalResults() {
 const themeButton = document.querySelector(".theme-button");
 const themeArray = ["body", ".theme", ".theme-button"];
 themeButton.addEventListener("click", toggleTheme);
+
 function toggleTheme() {
   const theme = localStorage.getItem("theme");
   if (theme === "light") {
