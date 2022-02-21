@@ -232,7 +232,7 @@ h1 {
 }
 
 .theme-button {
-  background-image: url("./assets/svg/tw.svg");
+  background-image: url("./assets/svg/sun.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 45px;
@@ -251,7 +251,7 @@ h1 {
 }
 
 .theme-button.light {
-  background-image: url("./assets/svg/pinterest.svg");
+  background-image: url("./assets/svg/moon.svg");
 }
 
 .theme-button:hover.light {

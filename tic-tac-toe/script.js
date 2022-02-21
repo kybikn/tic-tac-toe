@@ -189,8 +189,6 @@ function setLocalResults() {
 const themeButton = document.querySelector(".theme-button");
 const themeArray = ["body", ".theme"];
 themeButton.addEventListener("click", toggleTheme);
-// функция переключения темы
-//она в локальное хранилище записывает новое значение темы и вызывает функцию установки темы
 function toggleTheme() {
   const theme = localStorage.getItem("theme");
   if (theme === "light") {
@@ -201,16 +199,6 @@ function toggleTheme() {
   setTheme();
 }
 
-// const themeButton = document.querySelector(".theme-button");
-// function toggleTheme() {
-//   themeArray.forEach((selector) => {
-//     const elements = document.querySelectorAll(selector);
-//     elements.forEach((element) => {
-//       element.classList.toggle("light");
-//     });
-//   });
-// }
-// функция установки темы. берет значение темы из local storage и применяет эту тему.
 function setTheme() {
   const theme = localStorage.getItem("theme");
   if (theme === "light") {
