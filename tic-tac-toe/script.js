@@ -3,6 +3,8 @@ const res = document.querySelector(".res");
 const btnGame = document.querySelector(".btn");
 const box = document.querySelectorAll(".box");
 const h = document.querySelector(".shake");
+const emoje = document.querySelector(".emoje");
+
 let flag = 1;
 // let move = 0;
 let count = 0;
@@ -28,10 +30,10 @@ game.addEventListener("click", init);
 
 function changeImage() {
   if (flag == 0) {
-    document.img.src = "./assets/img/happy.png";
+    emoje.src = "./assets/img/happy.png";
     flag = 1;
   } else {
-    document.img.src = "./assets/img/syper.png";
+    emoje.src = "./assets/img/syper.png";
     flag = 0;
   }
 }
@@ -144,7 +146,7 @@ function drawScore() {
 
 function start() {
   getLocalResults();
-  getLocalScore();
+  // getLocalScore();
   drawScore();
 }
 
