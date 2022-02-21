@@ -187,7 +187,7 @@ function setLocalResults() {
 
 // window.addEventListener('beforeunload', setLocalStorage);
 const themeButton = document.querySelector(".theme-button");
-const themeArray = ["body", ".theme"];
+const themeArray = ["body", ".theme", ".theme-button"];
 themeButton.addEventListener("click", toggleTheme);
 function toggleTheme() {
   const theme = localStorage.getItem("theme");
