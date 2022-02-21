@@ -186,3 +186,50 @@ function setLocalResults() {
 // }
 
 // window.addEventListener('beforeunload', setLocalStorage);
+const themeButton = document.querySelector(".theme-button");
+const themeArray = ["body", ".theme"];
+themeButton.addEventListener("click", toggleTheme);
+// функция переключения темы
+//она в локальное хранилище записывает новое значение темы и вызывает функцию установки темы
+function toggleTheme() {
+  const theme = localStorage.getItem("theme");
+  if (theme === "light") {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+  setTheme();
+}
+
+// const themeButton = document.querySelector(".theme-button");
+// function toggleTheme() {
+//   themeArray.forEach((selector) => {
+//     const elements = document.querySelectorAll(selector);
+//     elements.forEach((element) => {
+//       element.classList.toggle("light");
+//     });
+//   });
+// }
+// функция установки темы. берет значение темы из local storage и применяет эту тему.
+function setTheme() {
+  const theme = localStorage.getItem("theme");
+  if (theme === "light") {
+    themeArray.forEach((selector) => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach((element) => {
+        element.classList.add("light");
+      });
+    });
+  } else {
+    themeArray.forEach((selector) => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach((element) => {
+        element.classList.remove("light");
+      });
+    });
+  }
+}
+if (!localStorage.getItem("theme")) {
+  localStorage.setItem("theme", "light");
+}
+setTheme();
