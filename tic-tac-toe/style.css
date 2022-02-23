@@ -227,7 +227,6 @@ h1 {
 .icon {
   height: 30px;
   padding-top: 20px;
-  /* padding-right: 25px; */
   width: 80px;
   transition: 0.8s;
   fill: #ffffff;
@@ -238,14 +237,21 @@ h1 {
   fill: red;
 }
 
+.svg {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440;
+  width: 100%;
+}
+
 .theme-button {
   background-image: url("./assets/svg/sun.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 45px;
   height: 45px;
-  margin-top: 0;
-  margin-right: 0;
+  margin-left: 50px;
+  margin-top: 10px;
   transition: 0.7s;
   cursor: pointer;
   fill: #ffffff;
@@ -269,4 +275,23 @@ h1 {
 
 body.light {
   background-color: rgb(1, 4, 10);
+}
+
+.sound-button {
+  background-image: url("./assets/svg/sound-off.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  transition: 0.7s;
+  margin-right: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+  fill: #ffffff;
+}
+
+.sound-button:hover {
+  cursor: pointer;
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }

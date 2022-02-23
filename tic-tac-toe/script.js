@@ -1,9 +1,13 @@
+const sound = document.querySelector(".sound-button");
+const audioMusic = document.querySelector(".audio-music");
 const game = document.querySelector(".game");
 const res = document.querySelector(".res");
-const btnGame = document.querySelector(".btn");
 const box = document.querySelectorAll(".box");
 const h = document.querySelector(".shake");
 const emoje = document.querySelector(".emoje");
+const btnGame = document.querySelector(".btn");
+const themeButton = document.querySelector(".theme-button");
+const themeArray = ["body", ".theme-button"];
 
 let flag = 1;
 // let move = 0;
@@ -12,6 +16,7 @@ let round = 1;
 let player1 = "X";
 let player2 = "O";
 let results;
+isSoundOn = false;
 let comb = [
   [0, 1, 2],
   [3, 4, 5],
@@ -25,18 +30,10 @@ let comb = [
 // let score;
 
 h.classList.remove("shake");
+sound.addEventListener("click", changeSound);
 btnGame.addEventListener("click", newGame);
 game.addEventListener("click", init);
-
-function changeImage() {
-  if (flag == 0) {
-    emoje.src = "./assets/img/happy.png";
-    flag = 1;
-  } else {
-    emoje.src = "./assets/img/syper.png";
-    flag = 0;
-  }
-}
+themeButton.addEventListener("click", toggleTheme);
 
 function init(e) {
   h.classList.remove("shake");
@@ -89,6 +86,7 @@ function win() {
         res.innerText = "Выиграли нолики!  Ходов: " + count;
         let crossAudio = new Audio("./audio/audio.mp3");
         crossAudio.play();
+        crossAudio.volume = 0.1;
       }, 1000);
       game.removeEventListener("click", init);
       return;
@@ -106,6 +104,16 @@ function win() {
   }
 }
 
+function changeImage() {
+  if (flag == 0) {
+    emoje.src = "./assets/img/happy.png";
+    flag = 1;
+  } else {
+    emoje.src = "./assets/img/syper.png";
+    flag = 0;
+  }
+}
+
 function newGame() {
   h.classList.toggle("shake");
   count = 0;
@@ -117,6 +125,7 @@ function newGame() {
     item.classList.remove("X", "O", "active");
     let crossAudio = new Audio("./audio/pobeda.mp3");
     crossAudio.play();
+    crossAudio.volume = 0.1;
     drawScore();
     changeImage();
   });
@@ -180,15 +189,10 @@ function setLocalResults() {
 //   }
 //   return score;
 // }
-
 // function setLocalStorage() {
 //   localStorage.setItem("score", JSON.stringify(score));
 // }
-
 // window.addEventListener('beforeunload', setLocalStorage);
-const themeButton = document.querySelector(".theme-button");
-const themeArray = ["body", ".theme", ".theme-button"];
-themeButton.addEventListener("click", toggleTheme);
 
 function toggleTheme() {
   const theme = localStorage.getItem("theme");
@@ -222,3 +226,19 @@ if (!localStorage.getItem("theme")) {
   localStorage.setItem("theme", "light");
 }
 setTheme();
+
+function changeSound() {
+  isSoundOn = !isSoundOn;
+  sound.style.backgroundImage = isSoundOn
+    ? 'url("./assets/svg/sound-on.svg")'
+    : 'url("./assets/svg/sound-off.svg")';
+  if (isSoundOn) {
+    sound.src = "./assets/svg/sound-on.svg";
+    audioMusic.play();
+    audioMusic.volume = 0.1;
+  } else {
+    sound.src = "./assets/svg/sound-off.svg";
+    audioMusic.pause();
+    audioMusic.volume = 0.1;
+  }
+}
