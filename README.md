@@ -1,4 +1,4 @@
-# Веб-приложение "Tic-tac-toe"
+# Игра "Tic-tac-toe"
 ## Сайт:
 [Click here!](https://kybikn.github.io/tic-tac-toe/tic-tac-toe/)
 
