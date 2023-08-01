@@ -6,7 +6,7 @@
 [Click here!](https://github.com/rolling-scopes-school/tic-tac-toe)
 
 ## Описание:
-**Tic-tac-toe** - игра крестики-нолики.<br>
+**"Tic-tac-toe"** - игра крестики-нолики.<br>
 Проект создавался в рамках прохождения stage#1 факультета "Веб-разработчик" Rolling Scopes School.<br>
 
 ## Технологии:
